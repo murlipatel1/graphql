@@ -30,6 +30,7 @@ query {
     email
   }
 }
+```
 
 ## Mutations
 Mutations are used to modify data on the server. Here's an example mutation to update a user's email:
@@ -42,7 +43,7 @@ mutation {
     email
   }
 }
-
+```
 
 This mutation updates the email of the user with ID 123 to newemail@example.com and returns the updated user information.
 
@@ -60,7 +61,7 @@ subscription {
     }
   }
 }
-
+```
 This subscription listens for new messages and returns the message ID, content, and sender information.
 
 Error Handling
@@ -79,12 +80,10 @@ Example Error Response
   ],
   "data": null
 }
-
-
+```
 Certainly! Below is an extended version of the GraphQL README file with code examples for mutations, subscriptions, and error handling.
 
-markdown
-Copy code
+
 # GraphQL API Documentation
 
 ## Overview
@@ -117,13 +116,13 @@ query {
     email
   }
 }
+```
 This query asks for the id, name, and email fields for a user with the ID 123.
 
 Mutations
 Mutations are used to modify data on the server. Here's an example mutation to update a user's email:
 
-graphql
-Copy code
+```graphql
 mutation {
   updateUser(id: "123", email: "newemail@example.com") {
     id
@@ -131,13 +130,13 @@ mutation {
     email
   }
 }
+``
 This mutation updates the email of the user with ID 123 to newemail@example.com and returns the updated user information.
 
 Subscriptions
 Subscriptions allow clients to receive real-time updates when specific events occur. For example, to listen for new messages, you can use the following subscription:
 
-graphql
-Copy code
+```graphql
 subscription {
   newMessage {
     id
@@ -148,14 +147,14 @@ subscription {
     }
   }
 }
+```
 This subscription listens for new messages and returns the message ID, content, and sender information.
 
 Error Handling
 If there are errors in your query or mutation, the server will return a JSON response with error information. Always check the errors field in the response for details on what went wrong.
 
 Example Error Response
-json
-Copy code
+```json
 {
   "errors": [
     {
@@ -166,6 +165,7 @@ Copy code
   ],
   "data": null
 }
+```
 In this example, the mutation to update a user failed due to invalid input, and the error message provides details on the issue.
 
 ## Conclusion
